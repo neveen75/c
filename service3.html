@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> باقات الاستضافة  </title>
+    
+    
+       <style>
+            body {
+                background-color: #f3bad6; /* لون الخلفية */
+                font-family: Arial, sans-serif;
+                color: #333;
+                margin: 20px;
+            }
+            h1 {
+                color: #cc0066; /* لون العنوان الرئيسي */
+                border-bottom: 2px solid #cc0066;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            h2 {
+                color: #ff66b2; /* لون الفقرة الفرعية */
+                margin-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:40px;
+            }
+            p {
+                margin: 30px 0;
+                line-height: 1.8;
+                font-size: larger;
+                font-weight: 300;
+                background-color: #ffccff; /* لون خلفية المستطيل */
+                padding: 20px;
+                border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل المستطيل */
+            }
+            .card {
+            background-image: url(ص.jpeg); /* لون البطاقة */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل البطاقة */
+            margin: 20px 0;
+        }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 20px;
+                justify-content: center;
+            }
+            .item {
+                background-color: #ffccff; /* درجة من الوردي */
+                border: 2px solid #ff99cc; /* درجة أغمق */
+                padding: 20px;
+                width: calc(33.333% - 40px); /* تنظيم العرض */
+                box-sizing: border-box;
+                text-align: center;
+                color: #cc0066; /* لون النص */
+                font-weight: bold;
+            }
+            .item {
+            background: linear-gradient(135deg, #ffccff, #ffe6f2); /* تدرج لوني */
+            border: 2px solid #ff99cc; /* درجة أغمق */
+            padding: 20px;
+            width: calc(33.333% - 40px); /* تنظيم العرض */
+            box-sizing: border-box;
+            text-align: center;
+            color: #cc0066; /* لون النص */
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s; /* تأثيرات التحويل والتحويم */
+        }
+        .item:hover {
+            transform: scale(1.05); /* تكبير العنصر عند التحويم */
+            background: linear-gradient(135deg, #ff99cc, #ffccff); /* تغيير التدرج اللوني عند التحويم */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+        }
+        .item {
+            background-color: #ffccff;
+            border: 2px solid #ff99cc;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 calc(33.333% - 40px); /* تنظيم العرض */
+            box-sizing: border-box;
+            text-align: center;
+            color: #cc0066;
+            font-weight: bold;
+        }
+        .header, .footer {
+            background-color: #ff66b2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .item {
+                flex: 1 1 calc(50% - 40px); /* تنظيم العرض للأجهزة المتوسطة */
+            }
+        }
+        @media (max-width: 480px) {
+            .item {
+                flex: 1 1 calc(100% - 40px); /* تنظيم العرض للأجهزة الصغيرة */
+            }
+        }
+  
+        </style>
+    </head>
+    <body>
+        <h1>خدمتنا المميزة </h1>
+        <center>
+         <h2> نظام الاستضافة </h2>
+         <p>    في نظام الاستضافة نقوم بالاعتناء بأطفالكم و توفير المرح و المتعة لهم , لذلك نقدم لكم باقات استضافة متنوعة لتناسب احتياجاتكم و احتياجات اطفالكم .</p>
+        </center>
+        <div class="card">
+          <div class="container">
+            <div class="item" onclick="togglecard(this)"> نظام الساعات
+             
+                <div class="hidden-card">
+                    <p> الساعة ب 3 ريال و تشمل سناك خفيف</p>
+                </div>
+            </div>
+            <div class="item" onclick="togglecard(this)">  النظام اليومي
+                <div class="hidden-card">
+                    <p>  من الساعة 7صباحا الى 4 عصرا فقط ب 5 ريال ولا تشمل وجبات</p>
+                </div>
+            </div>
+            <div class="item" onclick="togglecard(this)"> النظام اليومي 
+                <div class="hidden-card">
+                    <p>  من الساعة 7 صباحا الى 4 عصرا و تشمل 3 وجبات فقط ب 8 ريال </p>
+
+                </div>
+            </div>
+            <div class="item" onclick="togglecard(this)"> النظام الاسبوعي 
+                <div class="hidden-card">
+                    <p>  من الساعة 6 صباحا الى 4 عصرا و يشمل 3 وجبات فقط ب 25 ريال </p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </body>
+    </html>
+    
+    <center>
+     <button onclick="window.open('https://forms.gle/MfomabpmuZ42bVCW6' , ' _blank')" style="background-color: pink; font-size: 30px; padding: 10px 20px;">تسجيل </button>
+    </center>
+
+
+</html>
+
+
+
